@@ -1,5 +1,7 @@
 var car = {
-  position: ''
+  position: '',
+  positionX: 0,
+  positiony: 0
 };
 
 var $car = document.querySelector('#car');
@@ -20,4 +22,15 @@ function rotateCar(event) {
     $car.className = 'right';
   }
   car.position = $car.className;
+}
+
+document.addEventListener('keydown', startMoving);
+
+function startMoving(event) {
+  if (event.code === 'Space') {
+    window.setInterval(function () {
+      car.positionX += 5;
+      $car.style.left = car.positionX + 'px';
+    }, 16);
+  }
 }
