@@ -4,4 +4,21 @@ body {
 
 img {
   height: 200px;
+  transition: all 0.3s ease;
+}
+
+.up {
+  transform: rotate(-90deg);
+}
+
+.down {
+  transform: rotate(90deg);
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.right {
+  transform: rotate(0deg);
 }
